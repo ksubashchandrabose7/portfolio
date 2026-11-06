@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subash Chandra Bose K | UI/UX Developer</title>
+  <link rel="icon" type="image/jpeg" href="photo.jpg" />
+  <link rel="shortcut icon" type="image/jpeg" href="photo.jpg" />
+  <link rel="apple-touch-icon" href="photo.jpg" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ CURSOR ═══════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════ LOADER ═══════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-text">S<span>.</span>C<span>.</span>B</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">SCB<span class="logo-dot">.</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#internship" class="nav-link">Internship</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
+          <i class="fas fa-expand"></i>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon sun"><i class="fas fa-sun"></i></span>
+          <span class="toggle-icon moon"><i class="fas fa-moon"></i></span>
+          <div class="toggle-ball"></div>
+        </button>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-bg"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+        <h1 class="hero-title reveal-up">
+          <span class="title-line">Subash Chandra</span>
+          <span class="title-line highlight">Bose K</span>
+        </h1>
+        <div class="hero-role reveal-up">
+          <span class="role-prefix">I'm a </span>
+          <div class="typewriter-wrap">
+            <span class="typewriter" id="typewriter"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+        </div>
+        <p class="hero-desc reveal-up">
+          Computer Science undergraduate passionate about UI/UX design, with hands-on experience in Unity and Figma. Skilled in creating interactive applications and user-friendly digital experiences.
+        </p>
+        <div class="hero-actions reveal-up">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+          </a>
+        </div>
+        <div class="hero-socials reveal-up">
+          <a href="mailto:subashkannan238@gmail.com" class="social-pill" target="_blank">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://linkedin.com" class="social-pill" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com" class="social-pill" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right">
+        <div class="photo-frame">
+          <div class="photo-ring ring-3"></div>
+          <div class="photo-ring ring-1"></div>
+          <div class="photo-ring ring-2"></div>
+          <div class="photo-circle">
+            <img src="photo.jpg" alt="Subash Chandra Bose K" class="profile-img" id="profileImg" onerror="this.style.display='none';" />
+            <div class="photo-initials" id="photoInitials">SCB</div>
+          </div>
+          <div class="photo-badge badge-ux"><i class="fas fa-pen-nib"></i> UI/UX</div>
+          <div class="photo-badge badge-dev"><i class="fas fa-code"></i> DEV</div>
+        </div>
+        <div class="stats-cards">
+          <div class="stat-card">
+            <div class="stat-num" data-count="4">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="5">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="80">0</div>
+            <div class="stat-label">Diploma %</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Who I Am</span>
+        <h2 class="section-title reveal-up">About <span class="accent">Me</span></h2>
+        <div class="section-line reveal-up"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <div class="about-icon-wrap"><i class="fas fa-user-circle"></i></div>
+          <h3>Profile</h3>
+          <p>Computer Science undergraduate passionate about UI/UX design, with hands-on experience in Unity and Figma. Skilled in creating interactive applications and user-friendly digital experiences. Adaptable, creative, and eager to learn new technologies.</p>
+        </div>
+        <div class="about-card reveal-up">
+          <div class="about-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+          <h3>Location</h3>
+          <p>Rajapalayam, Tamilnadu, India</p>
+          <div class="contact-info">
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <span>6379540750</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <span>subashkannan238@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card reveal-right">
+          <div class="about-icon-wrap"><i class="fas fa-star"></i></div>
+          <h3>Strengths</h3>
+          <ul class="strengths-list">
+            <li><i class="fas fa-check-circle"></i> Creative UI/UX designer and video editor</li>
+            <li><i class="fas fa-check-circle"></i> Adaptable and eager to learn new technologies</li>
+            <li><i class="fas fa-check-circle"></i> Responsibility and Accountability</li>
+          </ul>
+        </div>
+        <div class="about-card reveal-left">
+          <div class="about-icon-wrap"><i class="fas fa-language"></i></div>
+          <h3>Languages</h3>
+          <div class="lang-badges">
+            <span class="lang-badge">🇬🇧 English</span>
+            <span class="lang-badge">🇮🇳 Tamil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">What I Know</span>
+        <h2 class="section-title reveal-up">My <span class="accent">Skills</span></h2>
+        <div class="section-line reveal-up"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category reveal-left">
+          <h3 class="cat-title"><i class="fas fa-paint-brush"></i> Design</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-wrap">
+              <div class="skill-info">
+                <span>Figma (UI/UX Design)</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <h3 class="cat-title"><i class="fas fa-code"></i> Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-wrap">
+              <div class="skill-info"><span>HTML & CSS</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-info"><span>JavaScript</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-info"><span>React.js</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-info"><span>C++ / Python (Basics)</span><span class="skill-pct">60%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-bar-wrap">
+              <div class="skill-info"><span>MySQL</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-right">
+          <h3 class="cat-title"><i class="fas fa-tools"></i> Tools & Tech</h3>
+          <div class="tech-pills">
+            <span class="tech-pill"><i class="fab fa-figma"></i> Figma</span>
+            <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-pill"><i class="fab fa-react"></i> React</span>
+            <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-pill"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tech-pill"><i class="fas fa-project-diagram"></i> Neo4j</span>
+            <span class="tech-pill"><i class="fas fa-brain"></i> NLP</span>
+            <span class="tech-pill"><i class="fas fa-gamepad"></i> Unity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="cert-section">
+        <h3 class="cert-title reveal-up"><i class="fas fa-certificate"></i> Certifications</h3>
+        <div class="cert-grid">
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-award"></i></div>
+            <div class="cert-body">
+              <h4>Introduction to Machine Learning</h4>
+              <span class="cert-org">NPTEL</span>
+            </div>
+          </div>
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+            <div class="cert-body">
+              <h4>Cloud Computing</h4>
+              <span class="cert-org">NPTEL</span>
+            </div>
+          </div>
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-book"></i></div>
+            <div class="cert-body">
+              <h4>Technical English for Engineers</h4>
+              <span class="cert-org">NPTEL</span>
+            </div>
+          </div>
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="cert-body">
+              <h4>Networking Essentials</h4>
+              <span class="cert-org">Cisco</span>
+            </div>
+          </div>
+          <div class="cert-card reveal-up">
+            <div class="cert-icon"><i class="fas fa-database"></i></div>
+            <div class="cert-body">
+              <h4>Springboard – DBMS</h4>
+              <span class="cert-org">Infosys</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ EDUCATION ═══════════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">My Journey</span>
+        <h2 class="section-title reveal-up">Edu<span class="accent">cation</span></h2>
+        <div class="section-line reveal-up"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2023 – 2027</div>
+            <div class="timeline-badge">Pursuing</div>
+            <h3>Bachelor of Engineering in Computer Science</h3>
+            <h4><i class="fas fa-university"></i> National Engineering College, Kovilpatti</h4>
+            <p>Currently pursuing BE in Computer Science with focus on software development and UI/UX design principles.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-year">2021 – 2024</div>
+            <div class="timeline-badge badge-green">80% — Completed</div>
+            <h3>Diploma in Electrical & Electronic Engineering</h3>
+            <h4><i class="fas fa-university"></i> Ammaiappar Polytechnic College</h4>
+            <p>Completed Diploma with 80% aggregate, building strong technical foundation in electronics and electrical systems.</p>
+            <div class="progress-wrap">
+              <span>Percentage</span>
+              <div class="edu-bar"><div class="edu-fill" data-width="80"></div></div>
+              <span class="edu-pct">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">What I've Built</span>
+        <h2 class="section-title reveal-up">My <span class="accent">Projects</span></h2>
+        <div class="section-line reveal-up"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal-up" data-status="ongoing">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-brain"></i></div>
+            <div class="project-status ongoing">Ongoing</div>
+          </div>
+          <h3>AI Powered Industrial Knowledge Graph</h3>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">NLP</span>
+            <span class="stack-tag">Neo4j</span>
+            <span class="stack-tag">RAG</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Built an AI-powered graph for industrial knowledge management.</li>
+            <li>Implemented NLP, semantic search, and RAG-based QA.</li>
+            <li>Visualized relationships between industrial entities using Neo4j.</li>
+          </ul>
+          <div class="project-links">
+            <span class="link-disabled"><i class="fas fa-clock"></i> In Progress</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal-up" data-status="live">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-plane"></i></div>
+            <div class="project-status live">Live</div>
+          </div>
+          <h3>Dakshin Travel</h3>
+          <div class="project-sub">UI/UX Design using Figma</div>
+          <div class="project-stack">
+            <span class="stack-tag">Figma</span>
+            <span class="stack-tag">UI/UX</span>
+            <span class="stack-tag">Prototyping</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Designed a modern travel booking application prototype for South Indian tourism.</li>
+            <li>Created wireframes, user flows, and high-fidelity UI screens.</li>
+            <li>Focused on intuitive navigation, destination discovery, and booking experience.</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="fab fa-figma"></i> View Design</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal-up" data-status="live">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-utensils"></i></div>
+            <div class="project-status live">Live</div>
+          </div>
+          <h3>Food Delivery App</h3>
+          <div class="project-sub">UI/UX Design using Figma</div>
+          <div class="project-stack">
+            <span class="stack-tag">Figma</span>
+            <span class="stack-tag">UI/UX</span>
+            <span class="stack-tag">Wireframing</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Designed a modern food delivery app prototype using Figma.</li>
+            <li>Created wireframes, user flows, and high-fidelity UI screens.</li>
+            <li>Focused on easy navigation, food discovery, cart, and checkout experience.</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" class="proj-link"><i class="fab fa-figma"></i> View Design</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal-up" data-status="ongoing">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-dumbbell"></i></div>
+            <div class="project-status ongoing">Ongoing</div>
+          </div>
+          <h3>Fitness Tracking App</h3>
+          <div class="project-sub">UI/UX Design using Figma</div>
+          <div class="project-stack">
+            <span class="stack-tag">Figma</span>
+            <span class="stack-tag">UI/UX</span>
+            <span class="stack-tag">Dashboard</span>
+          </div>
+          <ul class="project-bullets">
+            <li>Designed a fitness and workout tracking app prototype using Figma.</li>
+            <li>Created workout plans, progress tracking, and user-friendly dashboard screens.</li>
+            <li>Focused on intuitive navigation, exercise tracking, and fitness progress visualization.</li>
+          </ul>
+          <div class="project-links">
+            <span class="link-disabled"><i class="fas fa-clock"></i> In Progress</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ INTERNSHIP ═══════════════════ -->
+  <section class="section" id="internship">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Experience</span>
+        <h2 class="section-title reveal-up">Intern<span class="accent">ship</span></h2>
+        <div class="section-line reveal-up"></div>
+      </div>
+      <div class="internship-card reveal-up">
+        <div class="intern-left">
+          <div class="intern-logo"><i class="fas fa-robot"></i></div>
+          <div class="intern-line"></div>
+        </div>
+        <div class="intern-content">
+          <div class="intern-header">
+            <div>
+              <h3>AI Intern</h3>
+              <h4>CodSoft</h4>
+            </div>
+            <div class="intern-meta">
+              <span class="intern-duration"><i class="fas fa-calendar-alt"></i> 1 Month</span>
+              <a href="https://github.com" class="intern-link" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <ul class="intern-bullets">
+            <li>
+              <i class="fas fa-chevron-right"></i>
+              Developed an AI-based Restaurant Recommendation System using collaborative filtering.
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>
+              Implemented Truncated SVD to generate personalized restaurant recommendations.
+            </li>
+            <li>
+              <i class="fas fa-chevron-right"></i>
+              Built and integrated the full-stack application, connecting the AI recommendation model with the web interface and backend.
+            </li>
+          </ul>
+          <div class="intern-tech">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">AI/ML</span>
+            <span class="stack-tag">Collaborative Filtering</span>
+            <span class="stack-tag">SVD</span>
+            <span class="stack-tag">Full Stack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal-up">Get In Touch</span>
+        <h2 class="section-title reveal-up">Contact <span class="accent">Me</span></h2>
+        <div class="section-line reveal-up"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-panel reveal-left">
+          <h3>Let's Work Together</h3>
+          <p>I'm currently open to new opportunities and collaborations. Whether you have a project idea, want to chat about design, or just want to say hello — my inbox is always open!</p>
+          <div class="contact-details">
+            <a href="mailto:subashkannan238@gmail.com" class="contact-detail-item">
+              <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="detail-label">Email</span>
+                <span class="detail-value">subashkannan238@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:6379540750" class="contact-detail-item">
+              <div class="detail-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="detail-label">Phone</span>
+                <span class="detail-value">6379540750</span>
+              </div>
+            </a>
+            <div class="contact-detail-item">
+              <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">Rajapalayam, Tamilnadu</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://linkedin.com" class="social-btn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" class="social-btn" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:subashkannan238@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-panel reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="Project Discussion" required />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">SCB<span>.</span></div>
+      <p class="footer-tagline">Crafting beautiful digital experiences.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">© 2026 Subash Chandra Bose K. All Rights Reserved. Crafted with <span class="heart">♥</span></p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
