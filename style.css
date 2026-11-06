@@ -1603,3 +1603,33 @@ img { max-width: 100%; }
   .stats-cards { grid-template-columns: 1fr; width: 100%; }
   .stat-card { width: 100%; max-width: 100%; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   HIDE NETLIFY BADGE / DRAWER / TAB
+═══════════════════════════════════════════════════════════ */
+netlify-drawer,
+#netlify-drawer,
+.netlify-drawer,
+#netlify-badge,
+.netlify-badge,
+[data-netlify-drawer],
+[data-netlify-badge],
+[data-netlify-feedback],
+iframe[src*="netlify"],
+iframe[title*="Netlify"],
+iframe[title*="netlify"],
+div[id*="netlify"],
+div[class*="netlify"],
+[aria-label*="Netlify"],
+[aria-label*="netlify"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+  z-index: -99999 !important;
+}

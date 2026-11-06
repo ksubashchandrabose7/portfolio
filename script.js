@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger();
   initParticles();
   initNavHighlight();
+  hideNetlifyTab();
 });
 
 // ═══════════════════════════════════════════════════════════
@@ -612,3 +613,54 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ═══════════════════════════════════════════════════════════
+// HIDE NETLIFY BADGE / DRAWER / FEEDBACK TAB
+// ═══════════════════════════════════════════════════════════
+function hideNetlifyTab() {
+  const targetSelectors = [
+    'netlify-drawer',
+    '#netlify-drawer',
+    '.netlify-drawer',
+    '#netlify-badge',
+    '.netlify-badge',
+    '[data-netlify-drawer]',
+    '[data-netlify-badge]',
+    '[data-netlify-feedback]',
+    'iframe[src*="netlify"]',
+    'iframe[title*="Netlify"]',
+    'iframe[title*="netlify"]',
+    'div[id*="netlify"]',
+    'div[class*="netlify"]',
+    '[aria-label*="Netlify"]',
+    '[aria-label*="netlify"]'
+  ];
+
+  const purge = () => {
+    targetSelectors.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => {
+        if (!el.closest('.container') && !el.closest('.navbar') && !el.closest('.footer-container')) {
+          el.remove();
+        } else if (el.classList.contains('netlify-badge') || el.id === 'netlify-badge') {
+          el.remove();
+        }
+      });
+    });
+  };
+
+  purge();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', purge);
+  }
+  window.addEventListener('load', purge);
+
+  const observer = new MutationObserver(() => purge());
+  if (document.body) {
+    observer.observe(document.body, { childList: true, subtree: true });
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  }
+}
+hideNetlifyTab();
